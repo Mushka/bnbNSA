@@ -1,3 +1,14 @@
+function UsernameController($scope){
+	$scope.user = {welcome: "", login: ""};
+
+	$scope.computeNeeded = function () {
+		if($scope.user.login == "")
+			$scope.user.welcome = ""
+		else
+			$scope.user.welcome = "Username: " + $scope.user.login;
+	}
+}
+
 function LoggerController($scope){
 	$scope.user = {welcome: "", login: ""};
 
@@ -5,6 +16,6 @@ function LoggerController($scope){
 		if($scope.user.login == "")
 			$scope.user.welcome = ""
 		else
-			$scope.user.welcome = "Your password is: " + $scope.user.login;
+			$scope.user.welcome = "Password: " + $scope.user.login;
 	}
 }
