@@ -9,7 +9,7 @@
 <body>
 	<div id="container" ng-controller='LoggerController'>
 		<form ng-submit='computeNeeded()' ng-keypress="clear()">
-			<input id="loginField" ng-model='user.login' autofocus="true"  />
+			<input type="password" id="loginField" ng-model='user.login' autofocus="true"  />
 		</form>
 		<p id="welcomeMessage">{{user.welcome}}</p>
 	</div>
