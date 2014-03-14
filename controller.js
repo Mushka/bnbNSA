@@ -5,6 +5,6 @@ function LoggerController($scope){
 		if($scope.user.login == "")
 			$scope.user.welcome = ""
 		else
-			$scope.user.welcome = "Your password is: " + $scope.user.login;
-	}
+			$scope.user.welcome = "Hello, " + $scope.user.login;
+	} 
 }
