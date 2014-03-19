@@ -8,13 +8,18 @@ The goal of this project is to create a webapp which will:
 - 
 
 Api Methods For GET
-1 - Getuserinfo
-2 - delete
-3 - add
-4 - check
+
+- Getuserinfo
+- delete
+- add
+- check
+
 
 Api Request Example 
 
- 1- api.php?action=getuserinfo&rfid=XXXX
- 2- api.php?action=delete&rfid=XXXX
- 3- api.php?action=check&rfid=XXXX
+
+- api.php?action=getuserinfo&rfid=XXXX
+- api.php?action=delete&rfid=XXXX
+- api.php?action=check&rfid=XXXX
+ 
+ 
