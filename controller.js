@@ -1,10 +1,22 @@
-function LoggerController($scope){
-	$scope.user = {welcome: "", login: ""};
+ function LoggerController($scope, $http){
 
-	$scope.computeNeeded = function () {
-		if($scope.user.login == "")
-			$scope.user.welcome = ""
-		else
-			$scope.user.welcome = "Hello, " + $scope.user.login;
-	} 
+	$scope.computeNeeded = function(user){
+		if("undefined" != user.login){
+			$http({
+			  	method : "POST",
+			  	url : "http://localhost/club/api.php", 
+				data : { action : "getuserinfo", rfid: user.login
+
+ 
+				       }
+			  }).success(function(data){
+				  $scope.userdata = data;
+			  });
+			$scope.user = "";
+		}
+	}
+	
+
 }
+
+
