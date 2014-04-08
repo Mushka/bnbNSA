@@ -3,15 +3,16 @@
 
 
 	require_once("function.php");
+	$bnbnsa= new bnbnsa();
 
-	$bnbnsa = new bnbnsa();
+	
 
-	if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "GET")
+	if(isset($_GET) and $_SERVER['REQUEST_METHOD'] == "GET")
 	{
 
 
 	
-	if(isset($_GET['action']) and $_GET['action'] == "getuserinfo")
+	if(isset($_GET['action']) and $_GET['action'] == "user")
 	{
         $rfid =  (isset($_GET['rfid'])) ? $_GET['rfid'] : 0;
          
@@ -46,12 +47,28 @@
 
 
 
-
-
 	if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST"){
-	 $rfid =  (isset($_POST['rfid'])) ? $_POST['rfid'] : 0;
-	$bnbnsa->checkrfid($rfid);
+
+$data = json_decode(file_get_contents('php://input'), true);
+$action= $bnbnsa->validate($data["action"]);
+$rfid =  $bnbnsa->validate($data["rfid"]);
+
+
+	if(!empty($rfid) && $action =="user")
+
+	{
+	 echo $bnbnsa->checkrfid($rfid);
+
 		exit;
+	}
+
+
+
+
+
+
+
+
 	}
 	
 ?>

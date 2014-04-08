@@ -1,0 +1,5 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteRule ^api/?$ api.php
+RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)$ api.php?action=$1&rfid=$2
+RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)/$ api.php?action=$1&rfid=$2
