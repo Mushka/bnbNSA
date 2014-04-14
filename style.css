@@ -1,40 +1,31 @@
 body {
-	background-color: #FFFFFF;
+	background-color: #74A234;
 }
 
 #container {
-    width: 800px;
-    height: 700px;
+    width: 1px;
+    height: 1px;
     margin: auto;
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
-    /*min-width: 600px;
+    min-width: 600px;
     min-height: 200px;
-    border-style: solid;
+    /*border-style: solid;
     border-width: 1px;*/
 }
 
 #loginField {
-	border: 10px solid #005631;
+	border: 10px solid #427e02;
 	border-radius:20px;
 	-moz-border-radius:20px;
 	-webkit-border-radius:20px;
+
 	width: 300px;
 	height: 65px;
-	margin: 20 0 0 250;
+	margin: 20 0 0 150;
 	text-align: center;
 	font-size: 35px;
-	color: #005631;
 	outline-width: 0;
-}
-
-#logo {
-	width: 419px;
-	height: 432px;
-	margin: auto;
-	background-image:url("images/cslogo.png");
-	background-repeat: no-repeat;
-	margin-top: 20px;
 }
 
 #welcomeMessage {
@@ -43,5 +34,5 @@ body {
 	font-weight:bold;
 	text-align: center;
 	margin: 15px;
-	color: #005631;
+	color: white;
 }

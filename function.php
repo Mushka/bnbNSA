@@ -25,7 +25,7 @@ public function checkrfid($rfid)
 
     ($stmt->fetch()) ? $data=1 : $data=0 ; // check if it exist in the database
      $data = array('userexist' => $data );
- return json_encode($data);
+     return json_encode($data);
 
 
 }
@@ -70,6 +70,15 @@ public function checkrfid($rfid)
 						  // "utime" => $row->utime);
 
 	}
+
+	 public function validate($var)
+  {
+    $var = trim($var);
+    $var = stripslashes($var);
+    $var = preg_replace('/[^a-zA-Z0-9]/','',$var);
+    $var = htmlspecialchars($var);
+    return $var;
+  }
 
 
 
